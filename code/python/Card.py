@@ -48,6 +48,10 @@ class Card:
             #add error checking
             self.value=val
         
-    def __init__(self, val='', suit=''):
+    def __init__(self, val='', suit='', fullname=''):
         self.setValue(val)
         self.setSuit(suit)
+        if len(fullname)>0:
+            temp=fullname.split("_")
+            self.setValue(temp[0])
+            self.setSuit(temp[1])

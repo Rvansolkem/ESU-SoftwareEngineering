@@ -13,7 +13,8 @@ class Deck:
     
     def shuffleDeck(self):
         random.shuffle(self.pile)
-    
+    def addCard(self, c):
+        self.pile.append(c)
     #if deck is empty will return a card valled "InvalidCardName_InvalideCardSuit"
     def deal(self)->Card:
         if len(self.pile)>0:
