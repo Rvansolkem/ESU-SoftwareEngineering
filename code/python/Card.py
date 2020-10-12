@@ -1,6 +1,8 @@
 class Card:
     def getSuit(self)->str:
         return self.suit
+    def getNum(self)->int:
+        return self.num
     def getValue(self)->str:
         return self.value
     def getName(self)->str:
@@ -37,18 +39,20 @@ class Card:
                 10:"Ten", 
                 11:"Jack", 
                 12:"Queen", 
-                13:"King",
-                14:"Ace"
+                13:"King"
             }
             self.value=vals.get(val, "InvalidCardValue")
+            self.num=val
         elif len(val)==1:
             #convert to full string
             pass
         elif isinstance(val, str):
             #add error checking
+
             self.value=val
         
     def __init__(self, val='', suit='', fullname=''):
+        self.isSelected=False
         self.setValue(val)
         self.setSuit(suit)
         if len(fullname)>0:
