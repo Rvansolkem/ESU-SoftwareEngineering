@@ -19,6 +19,8 @@ class ICard{
         void setRank(std::string r);
         bool isFaceUp();
         bool isSelected();
+        void select();
+        void face_Up();
         BMP getCardView();
 };
 

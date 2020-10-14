@@ -25,6 +25,9 @@ bool ICard::isFaceUp(){return faceUp;}
 
 bool ICard::isSelected(){return selected;}
 
+void ICard::select(){selected=!selected;}
+void ICard::face_Up(){faceUp=!faceUp;}
+
 //relies on the BMP.h created
 //does not currently have any sort of real image creation along lines of cards
 BMP ICard::getCardView(){
@@ -44,4 +47,5 @@ BMP ICard::getCardView(){
         }
     }
     //above will fill a red rectangluar region
+    //above has since been abstracted to be an internal method called fillRegion()
 }

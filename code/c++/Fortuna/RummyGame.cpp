@@ -28,13 +28,17 @@ class IRummyGame{
 
         void discardDeal(){}//deal from discardPile
 
-        void addToMeld(){}//will add selected cards in hand to meld after checking if valid
+        bool addToMeld(){}//will add selected cards in hand to meld after checking if valid
 
-        void discard(){}//will discard card from hand to discardPile and end turn (check for game end as well)
+        void discard(ICard c){}//will discard card from hand to discardPile and end turn (check for game end as well)
 
         void makeComputerTurn(){}//will go through and make "good" moves as computer
 
         void saveData(){}//will save game data so game can be resumed
 
         void sortHand(){}//will sort hand by suit or rank
+
+        void resumeGame(){}//will resume game based off of last save data
+
+        void endGame(){}//will end game (from knock or end of deck/discard or any circumstance)
 };
