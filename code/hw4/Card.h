@@ -1,15 +1,16 @@
-#pragma once
 #include <string>
-#ifndef Card_h
-#define Card_h
+#ifndef CARD_H
+#define CARD_H
+#include "ICard.h"
 
-
-class Card{
+class Card : public ICard{
     private:
         std::string value;
         std::string suit;
         int num;
     public:
+        std::string getRank();
+        std::string getSuit();
         void setValue(int v);
         void setSuit(char s);
         void setSuit(std::string s);

@@ -3,15 +3,16 @@
 #define SStack_h
 #include <string>
 #include <vector>
+#include "IStack.h"
 #include "Card.h"
 
 
-class SStack{
+class SStack : public IStack{
 private:
-    std::vector<Card> v;
+    std::vector<ICard> v;
 public:
     SStack();
-    void push(Card c);
+    void push(ICard* c);
     Card pop();//remove and return last element
     void setStack(SStack *);
     int size();

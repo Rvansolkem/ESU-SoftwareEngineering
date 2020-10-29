@@ -86,6 +86,8 @@ void Card::setSuit(std::string s){
 std::string Card::getName(){
     return value+"_"+suit;
 }
+std::string Card::getSuit(){return suit;}
+std::string Card::getRank(){return value;}
 Card::Card(){}
 Card::Card(int v, char s){
     Card::setSuit(s);
