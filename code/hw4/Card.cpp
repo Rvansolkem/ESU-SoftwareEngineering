@@ -1,5 +1,6 @@
 #include "Card.h"
 
+
 void Card::setSuit(char s){
     switch(s){
         case 'H':
@@ -93,7 +94,3 @@ Card::Card(int v, char s){
     Card::setSuit(s);
     Card::setValue(v);
 }
-Card::~Card(){
-    //do onthing?
-}
-

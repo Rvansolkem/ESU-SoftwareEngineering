@@ -5,7 +5,7 @@
 #include "IReadCardList.h"
 class CardList : IReadCardList{
     private:
-        std::vector<ICard> v;
+        std::vector<ICard*> v;
     public: 
         CardList();
         void push(ICard* c);

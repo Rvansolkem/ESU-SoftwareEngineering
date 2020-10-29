@@ -5,12 +5,12 @@
 class ICard{
 
     public:
-        ICard();
-        ICard(std::string suit, std::string rank);
-        ~ICard();
         virtual std::string getRank() = 0;
         virtual std::string getSuit() = 0;
         virtual std::string getName() = 0;
+        protected:
+            ICard& operator=(const ICard&){return *this;}
 };
+
 
 #endif

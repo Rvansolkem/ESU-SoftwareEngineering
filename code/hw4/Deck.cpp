@@ -22,7 +22,7 @@ Deck::Deck(int n){
     for(int i=0;i<n;i++){
         int val=rand()%12 +1;//1-13
         int suit=rand()%4;
-        pile->push(dynamic_cast<ICard*>(new Card(val, suits[suit])));
+        pile->push( (ICard*)(new Card(val, suits[suit])));
     }
 }
 int Deck::size(){return pile->size();}

@@ -4,10 +4,10 @@
 
 class IStack{
     public:
-        IStack();
+        //virtual ~IStack()=0;
         virtual void push(ICard*) = 0;
         virtual ICard* pop() = 0;
 };
-
+//IStack::~IStack(){}
 
 #endif 

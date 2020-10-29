@@ -8,10 +8,10 @@ GameView::GameView(Deck * d, SStack * s){
 
 void GameView::display(){
     for(int i=0;i<deck->size();i++){
-        std::cout<<(deck->at(i)->getName())<<" ";
+        std::cout<<(dynamic_cast<Card*>(deck->at(i))->getName())<<" ";
     }
     std::cout<<"\n";
     for(int i=0;i<stack->size();i++){
-        std::cout<<stack->at(i)->getName()<<" ";
+        std::cout<<(dynamic_cast<Card*>(stack->at(i))->getName()) <<" ";
     }
 }

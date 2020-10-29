@@ -24,7 +24,6 @@ class Card : public ICard{
             
         }*/
         Card();
-        ~Card();
 };
 
 #endif
