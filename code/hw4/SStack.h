@@ -11,11 +11,11 @@ class SStack : public IStack{
     CardList* v;
 public:
     SStack();
-    void push(ICard* c);
-    ICard* pop();//remove and return last element
+    void push(Card c);
+    Card pop();//remove and return last element
     void setStack(SStack *);
     int size();
-    ICard* at(int);
+    Card at(int);
 };
 
 #endif

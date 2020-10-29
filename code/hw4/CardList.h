@@ -5,13 +5,13 @@
 #include "IReadCardList.h"
 class CardList : IReadCardList{
     private:
-        std::vector<ICard*> v;
+        std::vector<Card> v;
     public: 
         CardList();
-        void push(ICard* c);
-        ICard* pop();//remove and return last element
+        void push(Card c);
+        Card pop();//remove and return last element
         int size();
-        ICard* at(int);
+        Card at(int);
 
 };
 

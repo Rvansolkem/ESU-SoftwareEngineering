@@ -11,12 +11,12 @@ class Deck{
     private:
         SStack* pile;
     public:
-        ICard* deal();
+        Card deal();
         Deck(int n);
         ~Deck();
-        void push(ICard* c);
+        void push(Card c);
         int size();
-        ICard* at(int);
+        Card at(int);
 };
 
 #endif

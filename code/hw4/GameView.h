@@ -7,8 +7,8 @@
 
 class GameView{
 private:
-    IReadCardList* deck;
-    IReadCardList* stack;
+    Deck* deck;
+    SStack* stack;
 public:
     GameView(Deck *, SStack *);
     void display();

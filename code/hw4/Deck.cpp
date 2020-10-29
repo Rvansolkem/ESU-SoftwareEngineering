@@ -5,7 +5,7 @@
 #include<stdlib.h>
 #include<time.h>
 #include <vector>
-ICard* Deck::deal(){
+Card Deck::deal(){
     if(pile->size()>0){
         return pile->pop();
     }
@@ -16,20 +16,21 @@ Deck::~Deck(){
     }
 }
 Deck::Deck(int n){
+    pile=new SStack();
     //make deck of 10 random cards
     srand(time(NULL));
     char suits[]={'S', 'H', 'C', 'D'};
     for(int i=0;i<n;i++){
         int val=rand()%12 +1;//1-13
         int suit=rand()%4;
-        pile->push( (ICard*)(new Card(val, suits[suit])));
+        pile->push(Card(val, suits[suit]));
     }
 }
 int Deck::size(){return pile->size();}
 
-void Deck::push(ICard* c){
+void Deck::push(Card c){
     pile->push(c);
 }
-ICard* Deck::at(int i){
+Card Deck::at(int i){
     return pile->at(i);
 }

@@ -5,7 +5,7 @@
 class IReadCardList{
     public: 
         //virtual ~IReadCardList()=0;
-        virtual ICard* at(int) = 0; //return card at index
+        virtual Card at(int) = 0; //return card at index
         virtual int size()=0;
 };
 //IReadCardList::~IReadCardList(){}

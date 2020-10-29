@@ -4,19 +4,23 @@ SStack::SStack(){
    v=new CardList();
 }
 
-void SStack::push(ICard* c){
+void SStack::push(Card c){
     v->push(c);
 }
 
-ICard* SStack::pop(){
-    return v->pop();
+Card SStack::pop(){
+    if(v->size()>0)
+        return v->pop();
+    else{
+        throw;
+    }
 }
 
 int SStack::size(){
     return v->size();
 }
 
-ICard* SStack::at(int i){
+Card SStack::at(int i){
     return v->at(i);
 }
 
