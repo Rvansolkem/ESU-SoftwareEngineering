@@ -8,8 +8,8 @@
 
 class Game{
 private:
-    Deck deck;
-    SStack stack;
+    IStack* deck;
+    IStack* stack;
 public:
     Game(Deck * , SStack * );
     void move();

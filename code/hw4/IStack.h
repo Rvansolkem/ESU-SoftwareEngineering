@@ -6,6 +6,7 @@ class IStack{
     public:
         IStack();
         virtual void push(ICard*) = 0;
+        virtual ICard* pop() = 0;
 };
 
 

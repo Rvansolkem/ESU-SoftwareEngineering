@@ -5,19 +5,19 @@
 #include "Game.h"
 
 Game::Game(Deck * d, SStack * s){
-    deck.setDeck(d);
-    stack.setStack(s);
+    deck=(IStack*)d;
+    stack=(IStack*)s;
 }
 
 void Game::move(){
     //move cards from deck to stack
-    Card temp;
-    temp=deck.deal();
-    stack.push(temp);
+    ICard* temp;
+    temp=deck->pop();
+    stack->push(temp);
 }
 
 void Game::undo(){
     //move top card from stack back to deck
-    Card temp=stack.pop();
-    deck.addCard(temp);
+    ICard* temp=stack->pop();
+    deck->push(temp);
 }

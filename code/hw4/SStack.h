@@ -1,22 +1,21 @@
-#pragma once
 #ifndef SStack_h
 #define SStack_h
 #include <string>
 #include <vector>
 #include "IStack.h"
+#include "CardList.h"
 #include "Card.h"
 
 
 class SStack : public IStack{
-private:
-    std::vector<ICard> v;
+    CardList* v;
 public:
     SStack();
     void push(ICard* c);
-    Card pop();//remove and return last element
+    ICard* pop();//remove and return last element
     void setStack(SStack *);
     int size();
-    Card at(int);
+    ICard* at(int);
 };
 
 #endif

@@ -4,30 +4,19 @@
 #include <string>
 #include "Card.h"
 #include <vector>
+#include "SStack.h"
 
 
 class Deck{
     private:
-        std::vector<Card> pile;
-        int index;//point to current card for when dealing
+        SStack* pile;
     public:
-        void makeDeck();
-        void shuffleDeck();
-        Card deal();
-        Deck();
+        ICard* deal();
         Deck(int n);
-        Deck & getDeck();
-        void setDeck(Deck*);
         ~Deck();
-        Deck operator = (Deck const &obj){
-            Deck temp;
-            temp.pile=obj.pile;
-            temp.index=obj.index;
-            return temp;
-        }
-        void addCard(Card c);
+        void push(ICard* c);
         int size();
-        Card at(int);
+        ICard* at(int);
 };
 
 #endif

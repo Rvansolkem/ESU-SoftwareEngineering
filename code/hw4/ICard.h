@@ -10,6 +10,7 @@ class ICard{
         ~ICard();
         virtual std::string getRank() = 0;
         virtual std::string getSuit() = 0;
+        virtual std::string getName() = 0;
 };
 
 #endif
