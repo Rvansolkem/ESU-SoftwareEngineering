@@ -1,6 +1,7 @@
 #ifndef GAMEVIEW_H
 #define GAMEVIEW_H
 #include "IReadCardList.h"
+#include "CardList.h"
 class GameView{
     private:
         IReadCardList* l1;

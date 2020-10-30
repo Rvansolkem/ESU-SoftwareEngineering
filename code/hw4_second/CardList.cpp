@@ -19,11 +19,18 @@ Card* CardList::removeLast(){
 
 Card* CardList::getFirst(){
     if(!isEmpty()){
+        current_index=1;
         return v.front();
+    }
+    else{
+        throw "EndOfCardList";
     }
 }
 
 Card* CardList::getNext(){
+    if(current_index==v.size()){
+        throw "EndOfCardList";
+    }
     Card* temp=v.at(current_index);
     current_index++;
     return temp;
