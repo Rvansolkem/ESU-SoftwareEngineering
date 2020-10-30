@@ -1,11 +1,15 @@
 #include "SStack.h"
 
-bool SStack::isEmpty(){return (v.size() == 0);}
+bool SStack::isEmpty(){return list->isEmpty();}
 
 void SStack::push(Card* c){
-    list.append(c);
+    list->append(c);
 }
 
 Card* SStack::pop(){
-    return list.removeLast();
+    return list->removeLast();
+}
+
+SStack::SStack(){
+    list=new CardList();
 }

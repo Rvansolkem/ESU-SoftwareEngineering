@@ -4,12 +4,13 @@
 #include "Card.h"
 #include <vector>
 
-class CardList{
+class CardList: public IReadCardList{
     private:
         int numCards=0;
         std::vector<Card*> v;
         int current_index=0;
     public:
+        CardList();
         Card* getFirst();
         Card* getNext();
         void append(Card*);

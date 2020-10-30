@@ -4,7 +4,7 @@
 
 class Deck: public SStack{
     private:
-        SStack s;
+        SStack* s;
     public: 
         Deck(int);
 };

@@ -1,5 +1,10 @@
 #include "CardList.h"
-bool CardList::isEmpty(){return (v.size() == 0);}
+bool CardList::isEmpty(){
+    bool temp=v.size()==0;
+    return temp;
+}
+
+CardList::CardList(){}
 
 void CardList::append(Card* c){
     v.push_back(c);
