@@ -20,6 +20,7 @@ void GameView::display(){
     std::cout<<"\nList2: ";
     try{
         std::cout<<l2->getFirst()->getRank()<<" ";
+        std::cout<<"got past the first print";
         while(true){
             std::cout<<l2->getNext()->getRank()<<" ";
         }

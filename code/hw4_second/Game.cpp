@@ -10,7 +10,7 @@ void Game::move(){
         Card* temp=deck->pop();
         stack->push(temp);
     }
-    else{throw;}
+    //else{throw;}
 }
 
 void Game::undo(){
@@ -18,5 +18,5 @@ void Game::undo(){
         Card* temp=stack->pop();
         deck->push(temp);
     }
-    else{throw;}
+    //else{throw;}
 }
