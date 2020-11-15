@@ -39,9 +39,13 @@ int main(int argc, char *argv[])
 	ICard* temp1= new Card(3, 1);
 
 	printIState(temp1);
-	std::cout << "\n flipping the card\n";
+	std::cout << "\n Card -> ICard\n";
 	//no modifactions allowed from an ICard instance
 		//only accessing is allowed
-
+	printIState( (ICard*) temp);
+	int32_t w=100, h=100;
+	BMP* tempBMP = new BMP(w, h);
+	const char* filename="tempImage.bmp";
+	tempBMP->write(filename);
 	return 0;
 }
