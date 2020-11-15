@@ -46,8 +46,8 @@ class ICard{
         ~ICard(){};
 
         //returns enum
-        virtual rank getRank() = 0;
-        virtual suit getSuit() = 0;
+        virtual int getRank() = 0;
+        virtual int getSuit() = 0;
 
         //return instance of ICardView that reflects this instance of card for GUI layer
         virtual CardView* getCardView() = 0;

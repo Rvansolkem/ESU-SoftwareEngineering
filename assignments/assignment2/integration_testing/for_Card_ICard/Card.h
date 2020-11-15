@@ -8,18 +8,18 @@
 
 class Card: public ICard{
     private:
-        ICard::suit s;
-        ICard::rank r;
+        int s;
+        int r;
         bool faceUp;
         bool selected;
         //need ICardView private data
     public:
-        Card(ICard::rank, ICard::suit);//use enums nor string
+        Card(int, int);//use enums nor string
         ~Card();
-        ICard::rank getRank(); //from ICard
-        ICard::suit getSuit();//from ICard
-        void setSuit(ICard::suit s);
-        void setRank(ICard::rank r);
+        int getRank(); //from ICard
+        int getSuit();//from ICard
+        void setSuit(int s);
+        void setRank(int r);
         bool isFaceUp();
         bool isSelected();
         void select();

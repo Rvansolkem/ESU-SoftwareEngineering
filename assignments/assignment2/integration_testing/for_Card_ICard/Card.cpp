@@ -6,22 +6,22 @@
 //sets boolanes and nothing else. returns will return null
 
 
-Card::Card(ICard::rank ra,ICard::suit su){
+Card::Card(int ra,int su){
     setSuit(su);
     setRank(ra);
     selected=false;
     faceUp=false;
 }
 
-void Card::setSuit(ICard::suit su){s=su;}
+void Card::setSuit(int su){s=su;}
 
-void Card::setRank(ICard::rank ra){r=ra;}
+void Card::setRank(int ra){r=ra;}
 
-ICard::rank Card::getRank(){
+int Card::getRank(){
     return r; //maybe make this a switch that returns a string for each enum
 }
 
-ICard::suit Card::getSuit(){
+int Card::getSuit(){
     return s;
 }
 

@@ -1,24 +1,47 @@
 #include <iostream>
 #include "Card.h"
 #include "CardView.h"
+#include "BMP.h"
 #define concat(first, second) first secondstar
 using namespace std;
 
+void printState(Card* c){
+	int rank=c->getRank();
+	int suit=c->getSuit();
+	bool s=c->isSelected();
+	bool f=c->isFaceUp();
+	std::cout<<"rank: "<<rank<<"\nsuit: "<<suit<<"\nis selected: "<<s<<"\nis face up: "<<f<<std::endl;
+
+}
+void printIState(ICard* c){
+	int rank=c->getRank();
+	int suit=c->getSuit();
+	bool s=c->isSelected();
+	bool f=c->isFaceUp();
+	std::cout<<"rank: "<<rank<<"\nsuit: "<<suit<<"\nis selected: "<<s<<"\nis face up: "<<f<<std::endl;
+
+}
+
+
 int main(int argc, char *argv[])
 {
-	//make 10 cards
-	for(int i=0;i<10;i++){
-		//for each card, create it, get its name
-		const char* filename="cardImage.bmp";
-		Card* temp=new Card(ICard::Ace, ICard::Clubs);
-		//print state of everything
-		cout<<"rank: "<<temp->getRank()<<endl;
-		cout<<"suit: "<<temp->getSuit()<<endl;
-		if(i==0){
-			temp->flip();
-			ICardView* cardv=temp->getCardView();
-			cardv->write(filename);
-		}
-	}
+	std::cout << "\n testing Card\n";
+	Card* temp = new Card(0,3);//ace of clubs
+	printState(temp);
+	std::cout << "\n selecting the card\n";
+	temp->select();
+	printState(temp);
+	std::cout << "\n flipping the card\n";
+	temp->flip();
+	printState(temp);
+
+	std::cout << "\n testing ICard\n";
+	ICard* temp1= new Card(3, 1);
+
+	printIState(temp1);
+	std::cout << "\n flipping the card\n";
+	//no modifactions allowed from an ICard instance
+		//only accessing is allowed
+
 	return 0;
 }
