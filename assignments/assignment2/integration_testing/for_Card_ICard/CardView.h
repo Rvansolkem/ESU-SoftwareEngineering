@@ -10,7 +10,5 @@ class CardView : public ICardView{
     public:
         CardView(int, int, bool);
         void write(const char* filename);
-
-
 };
 #endif

@@ -1,5 +1,5 @@
 /*
-* made by Sean Crowley: team A
+* made by Sean Crowley: team A, AM class
 * discord username: mr_crowley#8084
 */
 #ifndef BMP_h

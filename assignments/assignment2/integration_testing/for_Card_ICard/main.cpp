@@ -46,6 +46,9 @@ int main(int argc, char *argv[])
 	int32_t w=100, h=100;
 	BMP* tempBMP = new BMP(w, h);
 	const char* filename="tempImage.bmp";
+	uint32_t w, h, x, y;
+	uint8_t b, g, r, a=0;
+	tempBMP->fill_region(x, y, w, h, b, g, r, a);
 	tempBMP->write(filename);
 	return 0;
 }

@@ -6,10 +6,11 @@
 #define CARD_H
 #include "ICard.h"
 
+
 class Card: public ICard{
     private:
-        int s;
-        int r;
+        int suit;
+        int rank;
         bool faceUp;
         bool selected;
         //need ICardView private data
@@ -18,14 +19,15 @@ class Card: public ICard{
         ~Card();
         int getRank(); //from ICard
         int getSuit();//from ICard
-        void setSuit(int s);
-        void setRank(int r);
-        bool isFaceUp();
-        bool isSelected();
+        //void setSuit(ICard::suit); // don't let this happen
+        //void setRank(ICard::rank);
+        bool isFaceUp(); // might need to add this to the interface also
+        bool isSelected(); // might need to add this to the interface also
         void select();
         void flip();
-        CardView* getCardView();//from ICard
+        ICardView* getCardView();//from ICard
 };
+
 
 
 #endif
