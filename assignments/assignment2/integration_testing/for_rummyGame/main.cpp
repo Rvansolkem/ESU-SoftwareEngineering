@@ -66,10 +66,12 @@ void printState(){
     cout<<"PlayerHand: ";
     ICard* tempCard=temp->getFirst();
     printCard(tempCard->getRank(), tempCard->getSuit());
+    cout<<", ";
     //get first card and then use getNext with a dynamic check to get the rest of the cards
     while(! temp->isLast()){
         ICard* tempCard=temp->getNext();
         printCard(tempCard->getRank(), tempCard->getSuit());
+        cout<<", ";
     }
     cout<<endl;
     temp->setFirst();
@@ -140,6 +142,7 @@ void discardPart(){
     while(! temp->isLast()){
         ICard* tempCard=temp->getNext();
         printCard(tempCard->getRank(), tempCard->getSuit());
+        cout<<": 0,  "
     }
     cout<<endl;
     temp->setFirst();
